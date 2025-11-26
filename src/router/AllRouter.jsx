@@ -1,60 +1,63 @@
+import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom"
-import MainLayout from "../components/MainLayout";
-import Home from "../Pages/Home";
-import About from "../Pages/About";
-import Contact from "../Pages/Contact";
-import Services from "../Pages/Services";
-import Details from "../Pages/Details";
-import Products from "../Pages/Products";
-import Mobile from "../Pages/Mobile";
-import Laptop from "../Pages/Laptop";
-import Account from "../Pages/Account";
-import Android from "../Pages/Android";
-import AndroidPhones from "../Pages/AndroidPhones";
-import Angular from "../Pages/Angular";
-import Backend from "../Pages/Backend";
-import CloudRun from "../Pages/CloudRun";
-import CloudServices from "../Pages/CloudServices";
-import ComputeEngine from "../Pages/ComputeEngine";
-import Django from "../Pages/Django";
-import AWS from "../Pages/AWS";
-import EC2 from "../Pages/EC2";
-import Electronics from "../Pages/Electronics";
-import EthnicWear from "../Pages/EthnicWear";
-import Fashion from "../Pages/Fashion";
-import Firestore from "../Pages/Firestore";
-import Frontend from "../Pages/Frontend";
-import GamingLaptops from "../Pages/GamingLaptops";
-import GoogleCloud from "../Pages/GoogleCloud";
-import IPhones from "../Pages/IPhones";
-import Ios from "../Pages/Ios";
-import Java from "../Pages/Java";
-import Jeans from "../Pages/Jeans";
-import Kotlin from "../Pages/Kotlin";
-import Lambda from "../Pages/Lambda";
-import Laptops from "../Pages/Laptops";
-import Laravel from "../Pages/Laravel";
-import Men from "../Pages/Men";
-import MobileDevelopment from "../Pages/MobileDevelopment";
-import Mobiles from "../Pages/Mobiles";
-import Node from "../Pages/Node";
-import Notifications from "../Pages/Notifications";
-import ObjectiveC from "../Pages/ObjectiveC";
-import OfficeLaptops from "../Pages/OfficeLaptops";
-import Orders from "../Pages/Orders";
-import Privacy from "../Pages/Privacy";
-import Profile from "../Pages/Profile";
-import React1 from "../Pages/React1";
-import S3 from "../Pages/S3";
-import Security from "../Pages/Security";
-import Settings from "../Pages/Settings";
-import Shirts from "../Pages/Shirts";
-import Swift from "../Pages/Swift";
-import Tops from "../Pages/Tops";
-import Vue from "../Pages/Vue";
-import WebDevelopment from "../Pages/WebDevelopment";
-import Whishlists from "../Pages/Whishlists";
-import Women from "../Pages/Women";
+// import MainLayout from "../components/MainLayout";
+// import Home from "../Pages/Home";
+// import About from "../Pages/About";
+// import Contact from "../Pages/Contact";
+// import Services from "../Pages/Services";
+// import Details from "../Pages/Details";
+// import Products from "../Pages/Products";
+// import Mobile from "../Pages/Mobile";
+// import Laptop from "../Pages/Laptop";
+// import Account from "../Pages/Account";
+// import Android from "../Pages/Android";
+// import AndroidPhones from "../Pages/AndroidPhones";
+// import Angular from "../Pages/Angular";
+// import Backend from "../Pages/Backend";
+// import CloudRun from "../Pages/CloudRun";
+// import CloudServices from "../Pages/CloudServices";
+// import ComputeEngine from "../Pages/ComputeEngine";
+// import Django from "../Pages/Django";
+// import AWS from "../Pages/AWS";
+// import EC2 from "../Pages/EC2";
+// import Electronics from "../Pages/Electronics";
+// import EthnicWear from "../Pages/EthnicWear";
+// import Fashion from "../Pages/Fashion";
+// import Firestore from "../Pages/Firestore";
+// import Frontend from "../Pages/Frontend";
+// import GamingLaptops from "../Pages/GamingLaptops";
+// import GoogleCloud from "../Pages/GoogleCloud";
+// import IPhones from "../Pages/IPhones";
+// import Ios from "../Pages/Ios";
+// import Java from "../Pages/Java";
+// import Jeans from "../Pages/Jeans";
+// import Kotlin from "../Pages/Kotlin";
+// import Lambda from "../Pages/Lambda";
+// import Laptops from "../Pages/Laptops";
+// import Laravel from "../Pages/Laravel";
+// import Men from "../Pages/Men";
+// import MobileDevelopment from "../Pages/MobileDevelopment";
+// import Mobiles from "../Pages/Mobiles";
+// import Node from "../Pages/Node";
+// import Notifications from "../Pages/Notifications";
+// import ObjectiveC from "../Pages/ObjectiveC";
+// import OfficeLaptops from "../Pages/OfficeLaptops";
+// import Orders from "../Pages/Orders";
+// import Privacy from "../Pages/Privacy";
+// import Profile from "../Pages/Profile";
+// import React1 from "../Pages/React1";
+// import S3 from "../Pages/S3";
+// import Security from "../Pages/Security";
+// import Settings from "../Pages/Settings";
+// import Shirts from "../Pages/Shirts";
+// import Swift from "../Pages/Swift";
+// import Tops from "../Pages/Tops";
+// import Vue from "../Pages/Vue";
+// import WebDevelopment from "../Pages/WebDevelopment";
+// import Whishlists from "../Pages/Whishlists";
+// import Women from "../Pages/Women";
+
+const Home  = lazy(() => import("../Pages/Home "))
 
 export const AllRouter = createBrowserRouter([
     // {
@@ -113,46 +116,46 @@ export const AllRouter = createBrowserRouter([
   },
 
   {
-    title: "Services",
+    element: <Services/>,
     path: "/services",
     icon: "services",
     children: [
       {
-        title: "WebDevelopment",
+        element: <WebDevelopment/>,
         path: "web-dev",
         children: [
           {
-            title: "Frontend",
+            element: <Frontend/>,
             path: "frontend",
             children: [
             {
-              title: "React1",
+              element: <React1/>,
               path: "react",
             },
             {
-              title: "Vue",
+              element: <Vue/>,
               path: "vue",
             },
             {
-              title: "Angular",
+              element: <Angular/>,
               path: "angular",
             },
             ],
           },
           {
-            title: "Backend",
+            element: <Backend/>,
             path: "backend",
             children: [
               {
-                title: "Node.js",
+                element: <Node/>,
                 path: "node",
               },
               {
-                title: "Django",
+                element: <Django/>,
                 path: "django",
               },
               {
-                title: "Laravel",
+                element: <Laravel/>,
                 path: "laravel",
               }
             ],
@@ -161,48 +164,49 @@ export const AllRouter = createBrowserRouter([
       },
 
       {
-        title: "MobileDevelopment",
+        element: <MobileDevelopment/>,
         path: "mobile-dev",
         children: [
           {
-            title: "Android",
+            element: <Android/>,
             path: "android",
             children: [
-              { title: "Kotlin", path: "kotlin" },
-              { title: "Java", path: "java" },
+              { element: <Kotlin/>, path: "kotlin" },
+              { element: <Java/>, path: "java" },
             ],
           },
           {
-            title: "IOS",
+            element: <Ios/>,
             path: "ios",
             children: [
-              { title: "Swift", path: "swift" },
-              { title: "ObjectiveC", path: "objc" },
+              { element: 
+                <Swift/>, path: "swift" },
+              { element: <ObjectiveC/>, path: "objc" },
             ],
           },
         ],
       },
 
       {
-        title: "CloudServices",
+        element: <CloudServices/>,
         path: "cloud",
         children: [
           {
-            title: "AWS",
+            element: <AWS/>,
             path: "aws",
             children: [
-              { title: "EC2", path: "ec2" },
-              { title: "Lambda", path: "lambda" },
-              { title: "S3", path: "s3" },
+              { element: <EC2/>, path: "ec2" },
+              { element: <Lambda/>, path: "lambda" },
+              { element: <S3/>, path: "s3" },
             ],
           },
           {
-            title: "GoogleCloud",
+            element: <GoogleCloud/>,
             path: "gcp",
             children: [
-              { title: "ComputeEngine", path: "compute" },
-              { title: "CloudRun", path: "run" },
-              { title: "Firestore", path: "firestore" },
+              {element:<ComputeEngine/>, path: "compute" },
+              { element: <CloudRun/>, path: "run" },
+              { element: <Firestore/>, path: "firestore" },
             ],
           },
         ],
@@ -211,49 +215,49 @@ export const AllRouter = createBrowserRouter([
   },
 
   {
-    title: "Products",
+    element: <Products/>,
     path: "/products",
     children: [
       {
-        title: "Electronics",
+        element: <Electronics/>,
         path: "electronics",
         children: [
           {
-            title: "Mobiles",
+            element: <Mobiles/>,
             path: "mobiles",
             children: [
-              { title: "AndroidPhones", path: "android" },
-              { title: "IPhones", path: "iphone" },
+              { element: <AndroidPhones/>, path: "android" },
+              { element: <IPhones/>, path: "iphone" },
             ],
           },
           {
-            title: "Laptops",
+            element: <Laptops/>,
             path: "laptops",
             children: [
-              { title: "GamingLaptops", path: "gaming" },
-              { title: "OfficeLaptops", path: "office" },
+              { element: <GamingLaptops/>, path: "gaming" },
+              { element: <OfficeLaptops/>, path: "office" },
             ],
           },
         ],
       },
       {
-        title: "Fashion",
+        element: <Fashion/>,
         path: "fashion",
         children: [
           {
-            title: "Men",
+            element: <Men/>,
             path: "men",
             children: [
-              { title: "Shirts", path: "shirts" },
-              { title: "Jeans", path: "jeans" },
+              { element: <Shirts/>, path: "shirts" },
+              { element: "Jeans", path: "jeans" },
             ],
           },
           {
-            title: "Women",
+            element: <Women/>,
             path: "women",
             children: [
-              { title: "Tops", path: "tops" },
-              { title: "EthnicWear", path: "ethnic" },
+              { element: <Tops/>, path: "tops" },
+              { element: <EthnicWear/>, path: "ethnic" },
             ],
           },
         ],
@@ -262,19 +266,19 @@ export const AllRouter = createBrowserRouter([
   },
 
   {
-    title: "Account",
+    element: <Account/>,
     path: "/account",
     children: [
-      { title: "Profile", path: "profile" },
-      { title: "Orders", path: "orders" },
-      { title: "Wishlist", path: "wishlist" },
+      { element: <Profile/>, path: "profile" },
+      { element: <Orders/>, path: "orders" },
+      { element: <Whishlists/>, path: "wishlist" },
       {
-        title: "Settings",
+        element: <Settings/>,
         path: "settings",
         children: [
-          { title: "Security", path: "security" },
-          { title: "Notifications", path: "notifications" },
-          { title: "Privacy", path: "privacy" },
+          { element: <Security/>, path: "security" },
+          { element: <Notifications/>, path: "notifications" },
+          { element: <Privacy/>, path: "privacy" },
         ],
       },
     ],
