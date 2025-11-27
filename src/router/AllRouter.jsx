@@ -57,7 +57,64 @@ import { createBrowserRouter } from "react-router-dom"
 // import Whishlists from "../Pages/Whishlists";
 // import Women from "../Pages/Women";
 
-const Home  = lazy(() => import("../Pages/Home "))
+
+// Pages
+const Home = lazy(() => import("../Pages/Home"));
+const About = lazy(() => import("../Pages/About"));
+const Contact = lazy(() => import("../Pages/Contact"));
+const Services = lazy(() => import("../Pages/Services"));
+const Details = lazy(() => import("../Pages/Details"));
+const Products = lazy(() => import("../Pages/Products"));
+const Mobile = lazy(() => import("../Pages/Mobile"));
+const Laptop = lazy(() => import("../Pages/Laptop"));
+const Account = lazy(() => import("../Pages/Account"));
+const Android = lazy(() => import("../Pages/Android"));
+const AndroidPhones = lazy(() => import("../Pages/AndroidPhones"));
+const Angular = lazy(() => import("../Pages/Angular"));
+const Backend = lazy(() => import("../Pages/Backend"));
+const CloudRun = lazy(() => import("../Pages/CloudRun"));
+const CloudServices = lazy(() => import("../Pages/CloudServices"));
+const ComputeEngine = lazy(() => import("../Pages/ComputeEngine"));
+const Django = lazy(() => import("../Pages/Django"));
+const AWS = lazy(() => import("../Pages/AWS"));
+const EC2 = lazy(() => import("../Pages/EC2"));
+const Electronics = lazy(() => import("../Pages/Electronics"));
+const EthnicWear = lazy(() => import("../Pages/EthnicWear"));
+const Fashion = lazy(() => import("../Pages/Fashion"));
+const Firestore = lazy(() => import("../Pages/Firestore"));
+const Frontend = lazy(() => import("../Pages/Frontend"));
+const GamingLaptops = lazy(() => import("../Pages/GamingLaptops"));
+const GoogleCloud = lazy(() => import("../Pages/GoogleCloud"));
+const IPhones = lazy(() => import("../Pages/IPhones"));
+const Ios = lazy(() => import("../Pages/Ios"));
+const Java = lazy(() => import("../Pages/Java"));
+const Jeans = lazy(() => import("../Pages/Jeans"));
+const Kotlin = lazy(() => import("../Pages/Kotlin"));
+const Lambda = lazy(() => import("../Pages/Lambda"));
+const Laptops = lazy(() => import("../Pages/Laptops"));
+const Laravel = lazy(() => import("../Pages/Laravel"));
+const Men = lazy(() => import("../Pages/Men"));
+const MobileDevelopment = lazy(() => import("../Pages/MobileDevelopment"));
+const Mobiles = lazy(() => import("../Pages/Mobiles"));
+const Node = lazy(() => import("../Pages/Node"));
+const Notifications = lazy(() => import("../Pages/Notifications"));
+const ObjectiveC = lazy(() => import("../Pages/ObjectiveC"));
+const OfficeLaptops = lazy(() => import("../Pages/OfficeLaptops"));
+const Orders = lazy(() => import("../Pages/Orders"));
+const Privacy = lazy(() => import("../Pages/Privacy"));
+const Profile = lazy(() => import("../Pages/Profile"));
+const React1 = lazy(() => import("../Pages/React1"));
+const S3 = lazy(() => import("../Pages/S3"));
+const Security = lazy(() => import("../Pages/Security"));
+const Settings = lazy(() => import("../Pages/Settings"));
+const Shirts = lazy(() => import("../Pages/Shirts"));
+const Swift = lazy(() => import("../Pages/Swift"));
+const Tops = lazy(() => import("../Pages/Tops"));
+const Vue = lazy(() => import("../Pages/Vue"));
+const WebDevelopment = lazy(() => import("../Pages/WebDevelopment"));
+const Whishlists = lazy(() => import("../Pages/Whishlists"));
+const Women = lazy(() => import("../Pages/Women"));
+
 
 export const AllRouter = createBrowserRouter([
     // {

@@ -1,8 +1,12 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 
 const WebDevelopment = () => {
   return (
-    <div>WebDevelopment</div>
+    <div>WebDevelopment
+
+      <Outlet/>
+    </div>
   )
 }
 
